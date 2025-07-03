@@ -21,14 +21,14 @@ export async function POST(request: Request) {
     }
 
     const client = await clientPromise;
-    const db = client.db('SakthiVijayan');
+    const db = client.db(); // Use the database from the connection string
     const collection = db.collection('booking_details');
     await collection.insertOne(parsedBooking.data);
 
     return NextResponse.json({ message: 'Booking successful!', booking: parsedBooking.data }, { status: 201 });
   } catch (error) {
-    console.error('Booking error:', error);
-    const errorMessage = error instanceof Error ? error.message : "An unknown server error occurred.";
+    console.error('Booking API Error:', error);
+    const errorMessage = error instanceof Error ? error.message : "An unknown server error occurred. Please check the server logs.";
     return NextResponse.json({ message: errorMessage }, { status: 500 });
   }
 }
