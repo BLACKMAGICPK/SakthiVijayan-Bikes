@@ -1,4 +1,5 @@
 import BikeList from "@/components/bikes/BikeList";
+import { bikes } from "@/lib/data";
 
 export const metadata = {
   title: 'Our Bikes | Sakthi Vijayan Bike Rentals',
@@ -15,7 +16,7 @@ export default function BikesPage() {
             Find the perfect bike for your next adventure. Use the filters to narrow down your search.
           </p>
         </div>
-        <BikeList />
+        <BikeList allBikes={bikes} />
       </div>
     </div>
   );

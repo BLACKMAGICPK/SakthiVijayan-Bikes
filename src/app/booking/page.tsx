@@ -1,5 +1,6 @@
 import BookingForm from "@/components/booking/BookingForm";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { bikes } from "@/lib/data";
 
 export const metadata = {
   title: 'Book Your Bike | Sakthi Vijayan Bike Rentals',
@@ -29,7 +30,7 @@ export default function BookingPage() {
             </div>
             <Card>
               <CardContent className="p-6 sm:p-8">
-                <BookingForm />
+                <BookingForm bikes={bikes} />
               </CardContent>
             </Card>
             <div className="mt-6 text-center text-muted-foreground">

@@ -5,52 +5,20 @@ import type { Bike } from '@/lib/types';
 import BikeCard from '../shared/BikeCard';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Slider } from '@/components/ui/slider';
-import { Skeleton } from '../ui/skeleton';
 import { Label } from '../ui/label';
 
-function BikeListSkeleton() {
-    return (
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} className="flex flex-col space-y-3">
-                    <Skeleton className="h-[240px] w-full rounded-lg" />
-                    <div className="space-y-2">
-                        <Skeleton className="h-6 w-3/4" />
-                        <Skeleton className="h-4 w-1/4" />
-                        <Skeleton className="h-16 w-full" />
-                    </div>
-                </div>
-            ))}
-        </div>
-    )
+interface BikeListProps {
+  allBikes: Bike[];
 }
 
-export default function BikeList() {
-  const [bikes, setBikes] = useState<Bike[]>([]);
-  const [filteredBikes, setFilteredBikes] = useState<Bike[]>([]);
-  const [loading, setLoading] = useState(true);
+export default function BikeList({ allBikes }: BikeListProps) {
+  const [bikes] = useState<Bike[]>(allBikes);
+  const [filteredBikes, setFilteredBikes] = useState<Bike[]>(allBikes);
   
   const [typeFilter, setTypeFilter] = useState('all');
   const [brandFilter, setBrandFilter] = useState('all');
   const [priceFilter, setPriceFilter] = useState([700]);
   
-  useEffect(() => {
-    async function fetchBikes() {
-      try {
-        setLoading(true);
-        const response = await fetch('/api/bikes');
-        const data = await response.json();
-        setBikes(data);
-        setFilteredBikes(data);
-      } catch (error) {
-        console.error('Failed to fetch bikes:', error);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchBikes();
-  }, []);
-
   const bikeTypes = useMemo(() => ['all', ...Array.from(new Set(bikes.map(b => b.type)))], [bikes]);
   const bikeBrands = useMemo(() => ['all', ...Array.from(new Set(bikes.map(b => b.brand)))], [bikes]);
 
@@ -99,9 +67,7 @@ export default function BikeList() {
             </div>
         </div>
 
-      {loading ? (
-        <BikeListSkeleton />
-      ) : filteredBikes.length > 0 ? (
+      {filteredBikes.length > 0 ? (
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {filteredBikes.map(bike => (
             <BikeCard key={bike.id} bike={bike} />

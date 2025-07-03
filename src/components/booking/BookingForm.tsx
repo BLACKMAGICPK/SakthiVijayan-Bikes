@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -32,11 +32,14 @@ const bookingFormSchema = z.object({
 
 type BookingFormValues = z.infer<typeof bookingFormSchema>;
 
-export default function BookingForm() {
+interface BookingFormProps {
+  bikes: Bike[];
+}
+
+export default function BookingForm({ bikes }: BookingFormProps) {
     const router = useRouter();
     const searchParams = useSearchParams();
     const { toast } = useToast();
-    const [bikes, setBikes] = useState<Bike[]>([]);
     const [isLoading, setIsLoading] = useState(false);
 
     const form = useForm<BookingFormValues>({
@@ -48,15 +51,6 @@ export default function BookingForm() {
             bikeId: searchParams.get('bikeId') || undefined,
         },
     });
-
-    useEffect(() => {
-        async function fetchBikes() {
-            const response = await fetch('/api/bikes');
-            const data = await response.json();
-            setBikes(data);
-        }
-        fetchBikes();
-    }, []);
 
     async function onSubmit(data: BookingFormValues) {
         setIsLoading(true);
