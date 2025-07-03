@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
+import clientPromise from '@/lib/mongodb';
 
 const bookingSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -19,8 +20,10 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: 'Invalid booking data', errors: parsedBooking.error.errors }, { status: 400 });
     }
 
-    // In a real application, you would save this to a database
-    console.log('New Booking Received:', parsedBooking.data);
+    const client = await clientPromise;
+    const db = client.db();
+    const collection = db.collection('booking_details');
+    await collection.insertOne(parsedBooking.data);
 
     return NextResponse.json({ message: 'Booking successful!', booking: parsedBooking.data }, { status: 201 });
   } catch (error) {
