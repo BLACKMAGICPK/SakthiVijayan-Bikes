@@ -13,7 +13,7 @@ export const bikes: Bike[] = [
     description: 'A stylish and reliable scooter, perfect for navigating city streets with ease and comfort. Great fuel efficiency.',
   },
   {
-    id: 2,
+    id: 5,
     name: 'Dio Blue',
     type: 'Scooter',
     brand: 'Honda',
@@ -43,7 +43,7 @@ export const bikes: Bike[] = [
     description: 'A stylish and reliable scooter, perfect for navigating city streets with ease and comfort. Great fuel efficiency.',
   },
   {
-    id: 5,
+    id: 2,
     name: 'Dio Black',
     type: 'Scooter',
     brand: 'Honda',
