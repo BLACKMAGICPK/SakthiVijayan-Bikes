@@ -52,6 +52,30 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'www.sagmart.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'th.bing.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tse1.mm.bing.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tse2.mm.bing.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tse3.mm.bing.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.91wheels.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'awtobazar.in',
+      },
     ],
   },
 };

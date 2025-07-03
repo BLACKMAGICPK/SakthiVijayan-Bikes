@@ -20,7 +20,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 
 const bookingFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  phone: z.string().length(10, { message: "Please enter a valid 10-digit phone number." }),
+  phone: z.string().regex(/^\d{10}$/, { message: "Please enter a valid 10-digit phone number." }),
   bikeId: z.string({ required_error: "Please select a bike." }),
   pickupDate: z.date({ required_error: "A pick-up date is required." }),
   returnDate: z.date({ required_error: "A return date is required." }),
@@ -44,7 +44,7 @@ export default function BookingForm() {
         defaultValues: {
             name: '',
             phone: '',
-            pickupLocation: 'Auroville Main Road, Kuillapalayam',
+            pickupLocation: 'Auroville Main Road, Kuyilappalayam',
             bikeId: searchParams.get('bikeId') || undefined,
         },
     });
@@ -100,7 +100,7 @@ export default function BookingForm() {
                     <FormField control={form.control} name="phone" render={({ field }) => (
                         <FormItem>
                             <FormLabel>Phone Number</FormLabel>
-                            <FormControl><Input placeholder="+91 XXXXX XXXXX" {...field} /></FormControl>
+                            <FormControl><Input placeholder="10-digit phone number" {...field} /></FormControl>
                             <FormMessage />
                         </FormItem>
                     )} />

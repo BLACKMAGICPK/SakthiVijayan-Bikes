@@ -9,7 +9,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://www.panalmotors.com/images/dio/dio-dlx-red.png',
+    image: 'https://tse1.mm.bing.net/th/id/OIP.TDzs4pYiNfZGdO4EmEf0ZgHaFj',
     description: 'A stylish and reliable scooter, perfect for navigating city streets with ease and comfort. Great fuel efficiency.',
   },
   {
@@ -19,7 +19,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://www.honda2wheelersindia.com/assets/images/dioImages/color/Dapper-Blue-Metallic.png',
+    image: 'https://tse2.mm.bing.net/th/id/OIP.kLVjR9kPox7sIGlLIF2u3QHaFj',
     description: 'A stylish and reliable scooter, perfect for navigating city streets with ease and comfort. Great fuel efficiency.',
   },
   {
@@ -29,7 +29,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://bd.gaadicdn.com/processedimages/honda/dio/source/dio62e8eec2e6f47.jpg?tr=w-375',
+    image: 'https://bd.gaadicdn.com/processedimages/honda/dio-bs6/640X309/dio-bs664883818de8e8.jpg?imwidth=890&impolicy=resize',
     description: 'A stylish and reliable scooter, perfect for navigating city streets with ease and comfort. Great fuel efficiency.',
   },
   {
@@ -39,7 +39,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://hondabikes.goodshow.com.ua/images/bikes/honda_dio_2020/colors/01.png',
+    image: 'https://th.bing.com/th/id/R.93d837b09829fbe1c3ebf50685bba01d?rik=zWDJ36tejPF8lg&riu=http%3a%2f%2fic1.maxabout.us%2fautos%2ftw_india%2f2%2f2017%2f3%2f2017-honda-dio.jpg',
     description: 'A stylish and reliable scooter, perfect for navigating city streets with ease and comfort. Great fuel efficiency.',
   },
   {
@@ -49,7 +49,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://bd.gaadicdn.com/processedimages/honda/dio/source/dio62e8eebe1c55c.jpg?tr=w-375',
+    image: 'https://tse3.mm.bing.net/th/id/OIP.GI2ixePenHmFS88ElsfAZAHaEK',
     description: 'A stylish and reliable scooter, perfect for navigating city streets with ease and comfort. Great fuel efficiency.',
   },
   {
@@ -59,7 +59,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://activa.honda2wheelersindia.com/assets/images/color/Pearl-Siren-Blue-New.png',
+    image: 'https://tse1.mm.bing.net/th/id/OIP.CLHCiGz9nZtkD9UH3bCKPQAAAA',
     description: 'A popular and dependable scooter, known for its smooth ride and comfortable seating. Ideal for daily commutes.',
   },
   {
@@ -69,7 +69,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://www.eshasuzuki.com/wp-content/uploads/2023/04/Mat-Axis-Grey-Metallic-New.png',
+    image: 'https://bd.gaadicdn.com/processedimages/honda/activa-125-2019/source/activa-125-20196422c410ade55.jpg',
     description: 'A popular and dependable scooter, known for its smooth ride and comfortable seating. Ideal for daily commutes.',
   },
   {
@@ -89,7 +89,7 @@ export const bikes: Bike[] = [
     brand: 'Hero',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://bd.gaadicdn.com/processedimages/hero/pleasure-plus/source/pleasure-plus62e8f17a94d93.jpg?tr=w-375',
+    image: 'https://images.91wheels.com/assets/b_images/gallery/heromotocorp/pleasure/heromotocorp-pleasure-7-1598109388.png',
     description: 'A lightweight and easy-to-handle scooter, designed for convenience and style in urban settings.',
   },
   // Geared Bike
@@ -100,7 +100,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 60,
     pricePerDay: 600,
-    image: 'https://www.honda2wheelersindia.com/assets/images/cd110/color/color-black-with-red.png',
+    image: 'https://awtobazar.in/wp-content/uploads/2019/11/CD-110-Dream-DLX-3.png',
     description: 'A reliable geared motorcycle offering a balance of power and fuel economy. Great for both city and highway rides.',
   },
 ];

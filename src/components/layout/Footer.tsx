@@ -27,7 +27,7 @@ export default function Footer() {
           <div>
             <h3 className="font-headline text-lg font-semibold">Contact Us</h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li>Auroville Main Road, Kuillapalayam – 605101</li>
+              <li>Auroville Main Road, Kuyilappalayam – 605101</li>
               <li>Email: svel58844@gmail.com</li>
               <li>Phone: 87782 54658</li>
             </ul>
@@ -37,12 +37,15 @@ export default function Footer() {
             <div className="mt-4 flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-primary"><Facebook /></Link>
               <Link href="#" className="text-muted-foreground hover:text-primary"><Instagram /></Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t border-border pt-4 text-center text-sm text-muted-foreground">
-          © Developed by Logic Loopers | Turning Logics into Launches
+        <div className="mt-8 flex flex-col items-center justify-center gap-4 border-t border-border pt-4 text-sm text-muted-foreground sm:flex-row sm:justify-between">
+          <p>© Developed by Logic Loopers | Turning Logics into Launches</p>
+           <div className="flex space-x-4">
+              <Link href="#" className="text-muted-foreground hover:text-primary"><Instagram /></Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
+            </div>
         </div>
       </div>
     </footer>

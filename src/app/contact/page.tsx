@@ -64,7 +64,7 @@ export default function ContactPage() {
                   <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold">Our Location</h3>
-                    <p className="text-muted-foreground">Auroville Main Road, Kuillapalayam – 605101</p>
+                    <p className="text-muted-foreground">Auroville Main Road, Kuyilappalayam – 605101</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
