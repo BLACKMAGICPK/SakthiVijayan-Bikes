@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative h-[calc(100vh-4rem)] w-full overflow-hidden">
         <Image
-          src="https://www.canva.com/design/DAGsHEZwU24/K2LVIcOQBAKtF0cV3eFElg/view?utm_content=DAGsHEZwU24&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h02206080bd"
+          src="https://i.ibb.co/S7PDXtkR/hero.png"
           alt="Black sports bike on a road"
           data-ai-hint="sports bike road"
           fill
