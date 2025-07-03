@@ -3,7 +3,7 @@ import { z } from 'zod';
 
 const bookingSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
-  phone: z.string().min(10, "Phone number must be at least 10 digits."),
+  phone: z.string().length(10, "Phone number must be 10 digits."),
   bikeId: z.string(),
   pickupDate: z.string().datetime(),
   returnDate: z.string().datetime(),

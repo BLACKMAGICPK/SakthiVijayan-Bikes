@@ -9,7 +9,7 @@ export default function About() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="order-2 lg:order-1">
             <h2 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl">
-              Your Adventure on Two Wheels
+              Our Passion for Pedals
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
               We believe that the best way to experience Auroville is on two wheels. Born from a love for cycling and adventure, our mission is to provide top-quality bikes and exceptional service to fuel your journey.
@@ -26,9 +26,9 @@ export default function About() {
           <div className="order-1 lg:order-2">
             <div className="relative h-96 w-full overflow-hidden rounded-lg shadow-xl">
               <Image
-                src="https://placehold.co/600x400.png"
-                alt="Bike workshop"
-                data-ai-hint="bike workshop"
+                src="https://www.eaglerider.com/imgs/list-your-bike/how_renting.jpg"
+                alt="Person handing over motorcycle keys"
+                data-ai-hint="renting motorcycle"
                 fill
                 className="object-cover transition-transform duration-500 hover:scale-105"
               />

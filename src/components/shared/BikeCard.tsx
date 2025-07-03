@@ -19,7 +19,7 @@ export default function BikeCard({ bike, className }: BikeCardProps) {
         <Image
           src={bike.image}
           alt={bike.name}
-          data-ai-hint={`${bike.type.toLowerCase()} bike`}
+          data-ai-hint={`${bike.type.toLowerCase()} bike white background`}
           fill
           className="object-cover"
         />
@@ -29,9 +29,8 @@ export default function BikeCard({ bike, className }: BikeCardProps) {
         <CardTitle className="font-headline text-2xl">{bike.name}</CardTitle>
         <p className="mt-2 text-sm text-muted-foreground">{bike.brand}</p>
         <p className="mt-4 flex-1 text-sm">{bike.description}</p>
-        <div className="mt-4 flex items-center justify-between">
-            <p className="text-lg font-bold text-primary">₹{bike.pricePerDay}<span className="text-sm font-normal text-muted-foreground">/day</span></p>
-            <p className="text-lg font-bold text-primary">₹{bike.pricePerHour}<span className="text-sm font-normal text-muted-foreground">/hr</span></p>
+        <div className="mt-4 flex items-center justify-center">
+            <p className="text-lg font-bold text-primary">₹{bike.pricePerDay}</p>
         </div>
       </CardContent>
       <CardFooter className="p-6 pt-0">

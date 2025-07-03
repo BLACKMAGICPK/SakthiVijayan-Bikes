@@ -20,7 +20,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 
 const bookingFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  phone: z.string().min(10, { message: "Please enter a valid phone number." }),
+  phone: z.string().length(10, { message: "Please enter a valid 10-digit phone number." }),
   bikeId: z.string({ required_error: "Please select a bike." }),
   pickupDate: z.date({ required_error: "A pick-up date is required." }),
   returnDate: z.date({ required_error: "A return date is required." }),
@@ -74,11 +74,6 @@ export default function BookingForm() {
             if (!response.ok) {
                 throw new Error('Failed to create booking');
             }
-
-            toast({
-                title: 'Booking Successful!',
-                description: "We've received your request and can't wait to see you.",
-            });
             router.push('/thank-you');
         } catch (error) {
             toast({
@@ -105,7 +100,7 @@ export default function BookingForm() {
                     <FormField control={form.control} name="phone" render={({ field }) => (
                         <FormItem>
                             <FormLabel>Phone Number</FormLabel>
-                            <FormControl><Input placeholder="(123) 456-7890" {...field} /></FormControl>
+                            <FormControl><Input placeholder="+91 XXXXX XXXXX" {...field} /></FormControl>
                             <FormMessage />
                         </FormItem>
                     )} />

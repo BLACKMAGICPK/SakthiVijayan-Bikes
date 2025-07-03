@@ -32,6 +32,10 @@ export default function BookingPage() {
                 <BookingForm />
               </CardContent>
             </Card>
+            <div className="mt-6 text-center text-muted-foreground">
+              <p className="font-semibold">Shop Address:</p>
+              <p>Auroville Main Road, Kuyilappalayam – 605101</p>
+            </div>
           </div>
           <div className="lg:col-span-1 mt-0 lg:mt-28">
              <Card>

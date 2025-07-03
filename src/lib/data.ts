@@ -9,7 +9,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://www.panalmotors.com/images/dio/dio-dlx-red.png',
     description: 'A stylish and reliable scooter, perfect for navigating city streets with ease and comfort. Great fuel efficiency.',
   },
   {
@@ -19,7 +19,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://www.honda2wheelersindia.com/assets/images/dioImages/color/Dapper-Blue-Metallic.png',
     description: 'A stylish and reliable scooter, perfect for navigating city streets with ease and comfort. Great fuel efficiency.',
   },
   {
@@ -29,7 +29,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://bd.gaadicdn.com/processedimages/honda/dio/source/dio62e8eec2e6f47.jpg?tr=w-375',
     description: 'A stylish and reliable scooter, perfect for navigating city streets with ease and comfort. Great fuel efficiency.',
   },
   {
@@ -39,7 +39,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://hondabikes.goodshow.com.ua/images/bikes/honda_dio_2020/colors/01.png',
     description: 'A stylish and reliable scooter, perfect for navigating city streets with ease and comfort. Great fuel efficiency.',
   },
   {
@@ -49,7 +49,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://bd.gaadicdn.com/processedimages/honda/dio/source/dio62e8eebe1c55c.jpg?tr=w-375',
     description: 'A stylish and reliable scooter, perfect for navigating city streets with ease and comfort. Great fuel efficiency.',
   },
   {
@@ -59,7 +59,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://activa.honda2wheelersindia.com/assets/images/color/Pearl-Siren-Blue-New.png',
     description: 'A popular and dependable scooter, known for its smooth ride and comfortable seating. Ideal for daily commutes.',
   },
   {
@@ -69,7 +69,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://www.eshasuzuki.com/wp-content/uploads/2023/04/Mat-Axis-Grey-Metallic-New.png',
     description: 'A popular and dependable scooter, known for its smooth ride and comfortable seating. Ideal for daily commutes.',
   },
   {
@@ -79,7 +79,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://www.sagmart.com/uploads/2016/10/26/product_1/honda_aviator_red.png',
     description: 'A premium scooter with a classy look and comfortable ride. Perfect for making a statement on the road.',
   },
   {
@@ -89,7 +89,7 @@ export const bikes: Bike[] = [
     brand: 'Hero',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://bd.gaadicdn.com/processedimages/hero/pleasure-plus/source/pleasure-plus62e8f17a94d93.jpg?tr=w-375',
     description: 'A lightweight and easy-to-handle scooter, designed for convenience and style in urban settings.',
   },
   // Geared Bike
@@ -100,7 +100,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 60,
     pricePerDay: 600,
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://www.honda2wheelersindia.com/assets/images/cd110/color/color-black-with-red.png',
     description: 'A reliable geared motorcycle offering a balance of power and fuel economy. Great for both city and highway rides.',
   },
 ];

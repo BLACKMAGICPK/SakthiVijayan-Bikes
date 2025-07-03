@@ -7,9 +7,9 @@ export default function Hero() {
   return (
     <section className="relative h-[calc(100vh-4rem)] w-full overflow-hidden">
         <Image
-          src="https://placehold.co/1920x1080.png"
-          alt="Cyclist riding on a scenic route"
-          data-ai-hint="cyclist scenic route"
+          src="https://www.hdwallpapers.in/download/grey_black_bmw_s_1000_rr_4k_5k_hd_bike-1920x1080.jpg"
+          alt="Black BMW sports bike"
+          data-ai-hint="bmw bike"
           fill
           className="object-cover"
           priority

@@ -16,6 +16,42 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.hdwallpapers.in',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.eaglerider.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.panalmotors.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.honda2wheelersindia.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'bd.gaadicdn.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'hondabikes.goodshow.com.ua',
+      },
+      {
+        protocol: 'https',
+        hostname: 'activa.honda2wheelersindia.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.eshasuzuki.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.sagmart.com',
+      },
     ],
   },
 };
