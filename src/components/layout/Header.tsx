@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Bike, Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
+import Image from 'next/image';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -21,8 +22,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-7xl items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <Bike className="h-6 w-6 text-primary" />
+        <Link href="/" className="flex items-center gap-3">
+          <Image src="https://placehold.co/32x32.png" alt="Sakthi Vijayan Bike Rental Logo" width={32} height={32} data-ai-hint="logo" />
           <span className="font-headline text-xl font-bold">Sakthi Vijayan Bike Rental</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">

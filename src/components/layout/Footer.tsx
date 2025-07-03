@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Bike, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -7,8 +8,8 @@ export default function Footer() {
       <div className="container mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="flex flex-col items-start">
-            <Link href="/" className="flex items-center gap-2">
-              <Bike className="h-8 w-8 text-primary" />
+            <Link href="/" className="flex items-center gap-3">
+              <Image src="https://placehold.co/40x40.png" alt="Sakthi Vijayan Bike Rental Logo" width={40} height={40} data-ai-hint="logo" />
               <span className="font-headline text-2xl font-bold">Sakthi Vijayan</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
