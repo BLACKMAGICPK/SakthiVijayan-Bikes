@@ -9,7 +9,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://tse1.mm.bing.net/th/id/OIP.TDzs4pYiNfZGdO4EmEf0ZgHaFj',
+    image: 'https://awtobazar.in/wp-content/uploads/2019/10/Honda-Dio-3.png',
     description: 'A stylish and reliable scooter, perfect for navigating city streets with ease and comfort. Great fuel efficiency.',
   },
   {
