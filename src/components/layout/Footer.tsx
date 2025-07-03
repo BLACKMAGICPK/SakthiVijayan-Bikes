@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="flex flex-col items-start">
             <Link href="/" className="flex items-center gap-3">
-              <Image src="https://i.ibb.co/5g4tTZBw/Copilot-20250703-123937.png" alt="Sakthi Vijayan Bike Rentals Logo" width={40} height={40} data-ai-hint="logo" />
+              <Image src="https://i.ibb.co/5g4tTZBw/Copilot-20250703-123937.png" alt="Sakthi Vijayan Bike Rentals Logo" width={40} height={40} data-ai-hint="logo" className="rounded-md" />
               <span className="font-headline text-xl font-bold">Sakthi Vijayan Bike Rentals</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">

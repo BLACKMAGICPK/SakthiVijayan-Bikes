@@ -21,9 +21,9 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-7xl items-center justify-between">
+      <div className="container flex h-16 max-w-7xl items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-3">
-          <Image src="https://i.ibb.co/5g4tTZBw/Copilot-20250703-123937.png" alt="Sakthi Vijayan Bike Rentals Logo" width={32} height={32} data-ai-hint="logo" />
+          <Image src="https://i.ibb.co/5g4tTZBw/Copilot-20250703-123937.png" alt="Sakthi Vijayan Bike Rentals Logo" width={32} height={32} data-ai-hint="logo" className="rounded-md" />
           <span className="font-headline text-xl font-bold">Sakthi Vijayan Bike Rentals</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
