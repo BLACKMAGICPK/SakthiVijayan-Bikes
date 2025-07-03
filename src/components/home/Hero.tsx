@@ -16,7 +16,7 @@ export default function Hero() {
         />
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative z-10 flex h-full items-center justify-center p-4 text-center">
-            <div className="container max-w-4xl rounded-[3rem] bg-white/40 p-8 text-foreground backdrop-blur-md sm:p-12">
+            <div className="container max-w-4xl rounded-[3rem] bg-white/20 p-8 text-foreground backdrop-blur-md sm:p-12">
                 <h1 className="font-headline text-5xl font-extrabold tracking-tight md:text-7xl lg:text-8xl">
                     Rent a Bike in <span className="text-primary">Auroville</span>.
                 </h1>
