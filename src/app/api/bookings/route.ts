@@ -27,8 +27,10 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ message: 'Booking successful!', booking: parsedBooking.data }, { status: 201 });
   } catch (error) {
-    console.error('Booking API Error:', error);
-    const errorMessage = error instanceof Error ? error.message : "An unknown server error occurred. Please check the server logs.";
-    return NextResponse.json({ message: errorMessage }, { status: 500 });
+    console.error('--- BOOKING API ERROR ---');
+    console.error(error);
+    console.error('-------------------------');
+    const errorMessage = error instanceof Error ? error.message : "An unknown server error occurred. Check the server logs for details.";
+    return NextResponse.json({ message: `Server Error: ${errorMessage}` }, { status: 500 });
   }
 }
