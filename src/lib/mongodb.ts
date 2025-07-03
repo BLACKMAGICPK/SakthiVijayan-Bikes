@@ -1,6 +1,11 @@
 import { MongoClient } from 'mongodb'
 
-const uri = process.env.MONGODB_URI
+// --- TEMPORARY DEBUGGING STEP ---
+// The MongoDB URI is hardcoded here to bypass issues with loading environment variables.
+// This is NOT recommended for production. Once the .env.local file issue is resolved,
+// this should be reverted to: const uri = process.env.MONGODB_URI
+const uri = "mongodb+srv://SakthiVijayan:Sakthivel%402006@sakthivijayan.rudh8iz.mongodb.net/SakthiVijayan?retryWrites=true&w=majority&appName=SakthiVijayan"
+
 const options = {
     serverSelectionTimeoutMS: 5000 // Timeout after 5s instead of 30s
 }
@@ -9,6 +14,7 @@ let client: MongoClient
 let clientPromise: Promise<MongoClient>
 
 if (!uri) {
+  // This check is unlikely to fail now, but we keep it for when we revert the hardcoded value.
   throw new Error('Invalid/Missing environment variable: "MONGODB_URI". Please ensure you have a .env.local file in the root of your project with this variable defined. You may need to restart your development server after creating the file.')
 }
 
