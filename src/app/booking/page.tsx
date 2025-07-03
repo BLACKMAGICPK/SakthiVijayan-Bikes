@@ -27,7 +27,11 @@ export default function BookingPage() {
                 You're just a few steps away from your next adventure. Fill out the form below to reserve your bike.
               </p>
             </div>
-            <BookingForm />
+            <Card>
+              <CardContent className="p-6 sm:p-8">
+                <BookingForm />
+              </CardContent>
+            </Card>
           </div>
           <div className="lg:col-span-1 mt-0 lg:mt-28">
              <Card>
