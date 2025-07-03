@@ -4,7 +4,7 @@ import clientPromise from '@/lib/mongodb';
 
 const bookingSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
-  phone: z.string().length(10, "Phone number must be 10 digits."),
+  phone: z.string().regex(/^\d{10}$/, { message: "Please enter a valid 10-digit phone number." }),
   bikeId: z.string(),
   pickupDate: z.string().datetime(),
   returnDate: z.string().datetime(),

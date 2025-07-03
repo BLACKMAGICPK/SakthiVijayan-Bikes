@@ -65,15 +65,18 @@ export default function BookingForm({ bikes }: BookingFormProps) {
                 }),
             });
 
+            const result = await response.json();
+
             if (!response.ok) {
-                throw new Error('Failed to create booking');
+                throw new Error(result.message || 'Failed to create booking');
             }
             router.push('/thank-you');
         } catch (error) {
+            const errorMessage = error instanceof Error ? error.message : 'There was a problem with your booking.';
             toast({
                 variant: 'destructive',
                 title: 'Uh oh! Something went wrong.',
-                description: 'There was a problem with your booking. Please try again.',
+                description: `${errorMessage}. Please try again.`,
             });
         } finally {
             setIsLoading(false);

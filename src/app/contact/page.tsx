@@ -47,8 +47,10 @@ function ContactForm() {
         body: JSON.stringify(data),
       });
 
+      const result = await response.json();
+
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        throw new Error(result.message || 'Failed to send message');
       }
 
       toast({
@@ -57,10 +59,11 @@ function ContactForm() {
       });
       form.reset();
     } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'There was a problem with your request.';
       toast({
         variant: 'destructive',
         title: 'Uh oh! Something went wrong.',
-        description: 'There was a problem with your request. Please try again.',
+        description: `${errorMessage}. Please try again.`,
       });
     } finally {
       setIsLoading(false);
