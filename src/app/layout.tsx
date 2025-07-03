@@ -6,7 +6,7 @@ import Footer from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Velocity Rides',
+  title: 'Sakthi Vijayan Bike Rentals',
   description: 'Your ultimate destination for bike rentals. Ride with speed and style.',
 };
 
