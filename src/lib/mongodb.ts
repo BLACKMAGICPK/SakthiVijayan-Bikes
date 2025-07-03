@@ -9,7 +9,7 @@ let clientPromise: Promise<MongoClient>
 if (!uri) {
   // Don't throw an error at the top level, as it causes a server crash.
   // Instead, the promise will reject, and the API routes will handle it gracefully.
-  clientPromise = Promise.reject(new Error('Invalid/Missing environment variable: "MONGODB_URI". Please add it to your .env.local file.'))
+  clientPromise = Promise.reject(new Error('Invalid/Missing environment variable: "MONGODB_URI". Please ensure you have a .env.local file in the root of your project with this variable defined. You may need to restart your development server after creating the file.'))
 } else {
   if (process.env.NODE_ENV === 'development') {
     // In development mode, use a global variable so that the value
