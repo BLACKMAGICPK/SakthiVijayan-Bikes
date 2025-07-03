@@ -90,7 +90,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent className="p-0">
                  <div className="relative h-64 w-full overflow-hidden rounded-b-lg">
-                    <Image src="https://placehold.co/800x400.png" alt="Map to our store" data-ai-hint="auroville map" fill className="object-cover" />
+                    <Image src="/file/d45097486e9e1c39c89196b0bd56eb3b60f1c2ac3798e1f57934440536750059.png" alt="Sakthi Vijayan Bike Rental store front" data-ai-hint="bike rental store" fill className="object-cover" />
                  </div>
               </CardContent>
             </Card>
