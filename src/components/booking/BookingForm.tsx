@@ -54,12 +54,25 @@ export default function BookingForm({ bikes }: BookingFormProps) {
 
     async function onSubmit(data: BookingFormValues) {
         setIsLoading(true);
+        const selectedBike = bikes.find(bike => String(bike.id) === data.bikeId);
+
+        if (!selectedBike) {
+            toast({
+                variant: 'destructive',
+                title: 'Uh oh! Something went wrong.',
+                description: 'Selected bike not found. Please try again.',
+            });
+            setIsLoading(false);
+            return;
+        }
+
         try {
             const response = await fetch('/api/bookings', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     ...data,
+                    bikeName: selectedBike.name,
                     pickupDate: data.pickupDate.toISOString(),
                     returnDate: data.returnDate.toISOString(),
                 }),

@@ -6,6 +6,7 @@ const bookingSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   phone: z.string().regex(/^\d{10}$/, { message: "Please enter a valid 10-digit phone number." }),
   bikeId: z.string(),
+  bikeName: z.string().min(1, "Bike name is required."),
   pickupDate: z.string().datetime(),
   returnDate: z.string().datetime(),
   pickupLocation: z.string().min(1, "Pickup location is required."),
