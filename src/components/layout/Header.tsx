@@ -21,12 +21,13 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-7xl items-center justify-between px-4">
+      <div className="container relative flex h-16 max-w-7xl items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-3">
           <Image src="https://i.ibb.co/5g4tTZBw/Copilot-20250703-123937.png" alt="Sakthi Vijayan Bike Rentals Logo" width={32} height={32} data-ai-hint="logo" className="rounded-md" />
           <span className="font-headline text-xl font-bold">Sakthi Vijayan Bike Rentals</span>
         </Link>
-        <nav className="hidden items-center gap-6 md:flex">
+
+        <nav className="hidden md:flex items-center gap-6 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -40,6 +41,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+        
         <div className="flex items-center gap-4">
           <Button asChild className="hidden md:flex">
             <Link href="/booking">Book Now</Link>
