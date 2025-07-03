@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     }
 
     const client = await clientPromise;
-    const db = client.db();
+    const db = client.db('SakthiVijayan');
     const collection = db.collection('get_in_touch');
     await collection.insertOne(parsedContact.data);
 

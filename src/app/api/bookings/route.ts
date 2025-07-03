@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     }
 
     const client = await clientPromise;
-    const db = client.db();
+    const db = client.db('SakthiVijayan');
     const collection = db.collection('booking_details');
     await collection.insertOne(parsedBooking.data);
 
