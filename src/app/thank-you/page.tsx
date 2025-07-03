@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const metadata = {
-  title: 'Thank You! | Sakthi Vijayan Bike Rental',
+  title: 'Thank You! | Velocity Rides',
   description: 'Your booking has been confirmed.',
 };
 

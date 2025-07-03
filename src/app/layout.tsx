@@ -6,8 +6,8 @@ import Footer from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Sakthi Vijayan Bike Rental',
-  description: 'Your ultimate destination for bike rentals in Auroville. Ride with speed and style.',
+  title: 'Velocity Rides',
+  description: 'Your ultimate destination for bike rentals. Ride with speed and style.',
 };
 
 export default function RootLayout({

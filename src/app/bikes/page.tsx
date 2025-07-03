@@ -1,7 +1,7 @@
 import BikeList from "@/components/bikes/BikeList";
 
 export const metadata = {
-  title: 'Our Bikes | Sakthi Vijayan Bike Rental',
+  title: 'Our Bikes | Velocity Rides',
   description: 'Browse our collection of high-quality mountain, road, and hybrid bikes.',
 };
 

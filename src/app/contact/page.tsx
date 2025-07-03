@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Contact Us | Sakthi Vijayan Bike Rental',
+  title: 'Contact Us | Velocity Rides',
   description: 'Get in touch with us for any inquiries or support.',
 };
 
@@ -90,7 +90,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent className="p-0">
                  <div className="relative h-64 w-full overflow-hidden rounded-b-lg">
-                    <Image src="https://i.ibb.co/hRQynBhc/our-store.png" alt="Sakthi Vijayan Bike Rental store front with scooters parked outside" data-ai-hint="bike rental store" fill className="object-cover" />
+                    <Image src="https://i.ibb.co/hRQynBhc/our-store.png" alt="Velocity Rides store front with scooters parked outside" data-ai-hint="bike rental store" fill className="object-cover" />
                  </div>
               </CardContent>
             </Card>

@@ -2,7 +2,7 @@ import BookingForm from "@/components/booking/BookingForm";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata = {
-  title: 'Book Your Bike | Sakthi Vijayan Bike Rental',
+  title: 'Book Your Bike | Velocity Rides',
   description: 'Complete your booking in just a few simple steps.',
 };
 

@@ -9,8 +9,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="flex flex-col items-start">
             <Link href="/" className="flex items-center gap-3">
-              <Image src="https://placehold.co/40x40.png" alt="Sakthi Vijayan Bike Rental Logo" width={40} height={40} data-ai-hint="logo" />
-              <span className="font-headline text-2xl font-bold">Sakthi Vijayan</span>
+              <Image src="https://i.ibb.co/5g4tTZBw/Copilot-20250703-123937.png" alt="Velocity Rides Logo" width={40} height={40} data-ai-hint="logo" />
+              <span className="font-headline text-2xl font-bold">Velocity Rides</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               Your adventure on two wheels starts here. Premium bikes for every terrain.
