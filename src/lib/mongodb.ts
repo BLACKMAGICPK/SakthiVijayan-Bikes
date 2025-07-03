@@ -1,15 +1,14 @@
 import { MongoClient } from 'mongodb'
 
 const uri = process.env.MONGODB_URI
-const options = {}
+const options = {
+    serverSelectionTimeoutMS: 5000 // Timeout after 5s instead of 30s
+}
 
 let client: MongoClient
 let clientPromise: Promise<MongoClient>
 
 if (!uri) {
-  // Throwing an error here will crash the server on startup if the env var is missing.
-  // This is a strict approach but makes it very clear that the .env.local file
-  // needs to be configured correctly before the app can run.
   throw new Error('Invalid/Missing environment variable: "MONGODB_URI". Please ensure you have a .env.local file in the root of your project with this variable defined. You may need to restart your development server after creating the file.')
 }
 

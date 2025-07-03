@@ -38,9 +38,18 @@ export async function POST(request: Request) {
     console.log("CONTACT API: Document inserted successfully:", insertResult.insertedId);
 
     return NextResponse.json({ message: 'Message sent successfully!' }, { status: 201 });
-  } catch (error) {
+  } catch (error: any) {
     console.error('--- CONTACT API: FATAL ERROR ---');
     console.error(error); // Log the full error object
+
+    // Check for a specific MongoDB connection timeout error
+    if (error.name === 'MongoServerSelectionError') {
+      return NextResponse.json({
+          message: 'Could not connect to database.',
+          troubleshooting: 'This is often caused by a firewall or an IP address not being whitelisted. Please ensure the server\'s IP address is on the IP Access List in your MongoDB Atlas settings.'
+      }, { status: 500 });
+    }
+
     const errorMessage = error instanceof Error ? error.message : "An unknown server error occurred.";
     return NextResponse.json({ message: `Server Error: ${errorMessage}` }, { status: 500 });
   }
