@@ -20,7 +20,7 @@ export default function Hero() {
                 <h1 className="font-headline text-5xl font-extrabold tracking-tight md:text-7xl lg:text-8xl">
                     Rent a Bike in <span className="text-primary">Auroville</span>.
                 </h1>
-                <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
+                <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground md:text-xl">
                     Explore Auroville and its surroundings on two wheels. We offer a variety of well-maintained scooters and bikes for rent.
                 </p>
                 <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
