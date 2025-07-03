@@ -9,13 +9,13 @@ export default function About() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="order-2 lg:order-1">
             <h2 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl">
-              Our Passion for the Pedal
+              Your Adventure on Two Wheels
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              At Velocity Rides, we believe that the best way to experience the world is on two wheels. Born from a love for cycling and adventure, our mission is to provide top-quality bikes and exceptional service to fuel your journey.
+              We believe that the best way to experience Auroville is on two wheels. Born from a love for cycling and adventure, our mission is to provide top-quality bikes and exceptional service to fuel your journey.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              Whether you're a seasoned pro or a casual rider, we have the perfect bike for you. Our fleet is meticulously maintained, and our team is always ready to share their favorite routes and tips.
+              Whether you're a local or a visitor, we have the perfect bike for you. Our fleet is meticulously maintained, and our team is always ready to help you get on the road.
             </p>
             <div className="mt-8">
               <Button asChild size="lg">

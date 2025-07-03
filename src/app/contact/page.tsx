@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Contact Us | Velocity Rides',
+  title: 'Contact Us | Sakthi Vijayan Bike Rental',
   description: 'Get in touch with us for any inquiries or support.',
 };
 
@@ -64,21 +64,21 @@ export default function ContactPage() {
                   <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold">Our Location</h3>
-                    <p className="text-muted-foreground">123 Bike Lane, Adventure City, USA 12345</p>
+                    <p className="text-muted-foreground">Auroville Main Road, Kuillapalayam – 605101</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <Mail className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-muted-foreground">contact@velocityrides.com</p>
+                    <p className="text-muted-foreground">contact@sakthivijayanbikes.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <Phone className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <p className="text-muted-foreground">(123) 456-7890</p>
+                    <p className="text-muted-foreground">87782 54658</p>
                   </div>
                 </div>
               </CardContent>
@@ -90,7 +90,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent className="p-0">
                  <div className="relative h-64 w-full overflow-hidden rounded-b-lg">
-                    <Image src="https://placehold.co/800x400.png" alt="Map to our store" data-ai-hint="city map" fill className="object-cover" />
+                    <Image src="https://placehold.co/800x400.png" alt="Map to our store" data-ai-hint="auroville map" fill className="object-cover" />
                  </div>
               </CardContent>
             </Card>

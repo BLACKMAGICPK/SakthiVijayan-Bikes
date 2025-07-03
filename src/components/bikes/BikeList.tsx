@@ -32,7 +32,7 @@ export default function BikeList() {
   
   const [typeFilter, setTypeFilter] = useState('all');
   const [brandFilter, setBrandFilter] = useState('all');
-  const [priceFilter, setPriceFilter] = useState([100]);
+  const [priceFilter, setPriceFilter] = useState([700]);
   
   useEffect(() => {
     async function fetchBikes() {
@@ -94,8 +94,8 @@ export default function BikeList() {
                 </Select>
             </div>
             <div>
-                <Label htmlFor="price-filter">Max Price Per Day: <span className="font-bold text-primary">${priceFilter[0]}</span></Label>
-                <Slider id="price-filter" min={0} max={100} step={5} value={priceFilter} onValueChange={setPriceFilter} />
+                <Label htmlFor="price-filter">Max Price Per Day: <span className="font-bold text-primary">₹{priceFilter[0]}</span></Label>
+                <Slider id="price-filter" min={300} max={700} step={50} value={priceFilter} onValueChange={setPriceFilter} />
             </div>
         </div>
 

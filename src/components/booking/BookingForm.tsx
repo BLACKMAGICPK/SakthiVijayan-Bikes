@@ -17,7 +17,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Card, CardContent } from '../ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 
 const bookingFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -45,7 +45,7 @@ export default function BookingForm() {
         defaultValues: {
             name: '',
             phone: '',
-            pickupLocation: 'Main Store - 123 Bike Lane',
+            pickupLocation: 'Auroville Main Road, Kuillapalayam',
             bikeId: searchParams.get('bikeId') || undefined,
         },
     });
@@ -126,7 +126,7 @@ export default function BookingForm() {
                                     <SelectContent>
                                         {bikes.map(bike => (
                                             <SelectItem key={bike.id} value={String(bike.id)}>
-                                                {bike.name} (${bike.pricePerDay}/day)
+                                                {bike.name} (₹{bike.pricePerDay}/day)
                                             </SelectItem>
                                         ))}
                                     </SelectContent>
@@ -168,7 +168,7 @@ export default function BookingForm() {
                                             </FormControl>
                                         </PopoverTrigger>
                                         <PopoverContent className="w-auto p-0" align="start">
-                                            <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled={(date) => date < (form.getValues("pickupDate") || new Date())} initialFocus />
+                                            <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled={(date) => date < (form.getValues("pickupDate") || new Date()))} initialFocus />
                                         </PopoverContent>
                                     </Popover>
                                     <FormMessage />

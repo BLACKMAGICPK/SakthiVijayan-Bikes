@@ -23,7 +23,7 @@ export default function Header() {
       <div className="container flex h-16 max-w-7xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Bike className="h-6 w-6 text-primary" />
-          <span className="font-headline text-xl font-bold">Velocity Rides</span>
+          <span className="font-headline text-xl font-bold">Sakthi Vijayan Bike Rental</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (

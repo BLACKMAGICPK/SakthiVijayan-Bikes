@@ -1,7 +1,7 @@
 export interface Bike {
   id: number;
   name: string;
-  type: 'Mountain' | 'Road' | 'Hybrid' | 'Cruiser';
+  type: 'Scooter' | 'Geared Bike';
   brand: string;
   pricePerHour: number;
   pricePerDay: number;

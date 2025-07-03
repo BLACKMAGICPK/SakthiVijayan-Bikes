@@ -30,8 +30,8 @@ export default function BikeCard({ bike, className }: BikeCardProps) {
         <p className="mt-2 text-sm text-muted-foreground">{bike.brand}</p>
         <p className="mt-4 flex-1 text-sm">{bike.description}</p>
         <div className="mt-4 flex items-center justify-between">
-            <p className="text-lg font-bold text-primary">${bike.pricePerDay}<span className="text-sm font-normal text-muted-foreground">/day</span></p>
-            <p className="text-lg font-bold text-primary">${bike.pricePerHour}<span className="text-sm font-normal text-muted-foreground">/hr</span></p>
+            <p className="text-lg font-bold text-primary">₹{bike.pricePerDay}<span className="text-sm font-normal text-muted-foreground">/day</span></p>
+            <p className="text-lg font-bold text-primary">₹{bike.pricePerHour}<span className="text-sm font-normal text-muted-foreground">/hr</span></p>
         </div>
       </CardContent>
       <CardFooter className="p-6 pt-0">

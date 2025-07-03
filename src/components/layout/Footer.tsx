@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="flex flex-col items-start">
             <Link href="/" className="flex items-center gap-2">
               <Bike className="h-8 w-8 text-primary" />
-              <span className="font-headline text-2xl font-bold">Velocity Rides</span>
+              <span className="font-headline text-2xl font-bold">Sakthi Vijayan</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               Your adventure on two wheels starts here. Premium bikes for every terrain.
@@ -27,9 +27,9 @@ export default function Footer() {
           <div>
             <h3 className="font-headline text-lg font-semibold">Contact Us</h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li>123 Bike Lane, Adventure City</li>
-              <li>Email: contact@velocityrides.com</li>
-              <li>Phone: (123) 456-7890</li>
+              <li>Auroville Main Road, Kuillapalayam – 605101</li>
+              <li>Email: contact@sakthivijayanbikes.com</li>
+              <li>Phone: 87782 54658</li>
             </ul>
           </div>
           <div>
@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-border pt-4 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Velocity Rides. All Rights Reserved.
+          © {new Date().getFullYear()} Sakthi Vijayan Bike Rental. All Rights Reserved.
         </div>
       </div>
     </footer>
