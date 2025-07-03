@@ -76,6 +76,14 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'awtobazar.in',
       },
+      {
+        protocol: 'https',
+        hostname: 'imgd.aeplcdn.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.drivespark.com',
+      },
     ],
   },
 };

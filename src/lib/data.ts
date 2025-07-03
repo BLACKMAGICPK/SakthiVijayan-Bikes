@@ -9,7 +9,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://awtobazar.in/wp-content/uploads/2019/10/Honda-Dio-3.png',
+    image: 'https://imgd.aeplcdn.com/1056x594/n/cw/ec/150373/dio-right-front-three-quarter-5.png?isig=0&q=80&wm=2',
     description: 'A stylish and reliable scooter, perfect for navigating city streets with ease and comfort. Great fuel efficiency.',
   },
   {
@@ -39,7 +39,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://th.bing.com/th/id/R.93d837b09829fbe1c3ebf50685bba01d?rik=zWDJ36tejPF8lg&riu=http%3a%2f%2fic1.maxabout.us%2fautos%2ftw_india%2f2%2f2017%2f3%2f2017-honda-dio.jpg',
+    image: 'https://awtobazar.in/wp-content/uploads/2019/10/Honda-Dio-3.png',
     description: 'A stylish and reliable scooter, perfect for navigating city streets with ease and comfort. Great fuel efficiency.',
   },
   {
@@ -79,7 +79,7 @@ export const bikes: Bike[] = [
     brand: 'Honda',
     pricePerHour: 40,
     pricePerDay: 400,
-    image: 'https://www.sagmart.com/uploads/2016/10/26/product_1/honda_aviator_red.png',
+    image: 'https://images.drivespark.com/img/2025/03/2025-honda-activa-125-front-1741149913.jpg',
     description: 'A premium scooter with a classy look and comfortable ride. Perfect for making a statement on the road.',
   },
   {
