@@ -10,25 +10,38 @@ const contactSchema = z.object({
 });
 
 export async function POST(request: Request) {
+  console.log("--- CONTACT API: REQUEST RECEIVED ---");
   try {
     const body = await request.json();
+    console.log("CONTACT API: Request body parsed:", body);
+
     const parsedContact = contactSchema.safeParse(body);
 
     if (!parsedContact.success) {
+      console.error("CONTACT API: Zod validation failed:", parsedContact.error.errors);
       return NextResponse.json({ message: 'Invalid data', errors: parsedContact.error.errors }, { status: 400 });
     }
+    console.log("CONTACT API: Zod validation successful.");
 
+    console.log("CONTACT API: Attempting to connect to MongoDB...");
     const client = await clientPromise;
-    const db = client.db('sakthiVijayan'); // Use the database from the connection string
+    console.log("CONTACT API: MongoDB client promise resolved.");
+
+    const db = client.db();
+    console.log(`CONTACT API: Using database: ${db.databaseName}`);
+
     const collection = db.collection('get_in_touch');
-    await collection.insertOne(parsedContact.data);
+    console.log(`CONTACT API: Using collection: ${collection.collectionName}`);
+
+    console.log("CONTACT API: Attempting to insert document:", parsedContact.data);
+    const insertResult = await collection.insertOne(parsedContact.data);
+    console.log("CONTACT API: Document inserted successfully:", insertResult.insertedId);
 
     return NextResponse.json({ message: 'Message sent successfully!' }, { status: 201 });
   } catch (error) {
-    console.error('--- CONTACT API ERROR ---');
-    console.error(error);
-    console.error('-------------------------');
-    const errorMessage = error instanceof Error ? error.message : "An unknown server error occurred. Check the server logs for details.";
+    console.error('--- CONTACT API: FATAL ERROR ---');
+    console.error(error); // Log the full error object
+    const errorMessage = error instanceof Error ? error.message : "An unknown server error occurred.";
     return NextResponse.json({ message: `Server Error: ${errorMessage}` }, { status: 500 });
   }
 }
