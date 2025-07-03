@@ -16,11 +16,11 @@ export default function Hero() {
         />
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative z-10 flex h-full items-center justify-center p-4 text-center">
-            <div className="container max-w-4xl rounded-2xl bg-black/40 p-8 text-white backdrop-blur-md sm:p-12">
+            <div className="container max-w-4xl rounded-[3rem] bg-white/40 p-8 text-foreground backdrop-blur-md sm:p-12">
                 <h1 className="font-headline text-5xl font-extrabold tracking-tight md:text-7xl lg:text-8xl">
                     Rent a Bike in <span className="text-primary">Auroville</span>.
                 </h1>
-                <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-200 md:text-xl">
+                <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
                     Explore Auroville and its surroundings on two wheels. We offer a variety of well-maintained scooters and bikes for rent.
                 </p>
                 <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
