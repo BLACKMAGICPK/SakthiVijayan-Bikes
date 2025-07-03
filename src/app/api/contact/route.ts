@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     }
 
     const client = await clientPromise;
-    const db = client.db(); // Use the database from the connection string
+    const db = client.db('sakthiVijayan'); // Use the database from the connection string
     const collection = db.collection('get_in_touch');
     await collection.insertOne(parsedContact.data);
 
