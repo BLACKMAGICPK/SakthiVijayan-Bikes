@@ -1,6 +1,8 @@
 import BookingForm from "@/components/booking/BookingForm";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { bikes } from "@/lib/data";
+export const dynamic = 'force-dynamic';
+
 
 export const metadata = {
   title: 'Book Your Bike | Sakthi Vijayan Bike Rentals',
