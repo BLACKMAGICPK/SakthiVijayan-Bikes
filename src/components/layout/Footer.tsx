@@ -70,8 +70,8 @@ export default function Footer() {
         <div className="mt-8 flex flex-col items-center justify-center gap-4 border-t border-border pt-4 text-sm text-muted-foreground sm:flex-row sm:justify-between">
           <p>© Developed by Logic Loopers | Turning Logics into Launches</p>
            <div className="flex space-x-4">
-              <Link href="https://www.instagram.com/logicloopersofficial/" className="text-muted-foreground hover:text-primary"><Instagram /></Link>
-              <Link href="https://www.linkedin.com/company/logic-loopers/" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
+              <a href="https://www.instagram.com/logicloopersofficial/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Instagram /></a>
+              <a href="https://www.linkedin.com/company/logic-loopers/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Linkedin /></a>
             </div>
         </div>
       </div>
