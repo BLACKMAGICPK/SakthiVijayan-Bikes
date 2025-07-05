@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Footer() {
@@ -37,7 +37,7 @@ export default function Footer() {
                   aria-label="View our location on Google Maps"
                 >
                   <Image
-                    src="https://i.ibb.co/6y43JqY/map-image.png"
+                    src="https://images.adsttc.com/media/image_maps/5dd4/baf0/3312/fdf9/a600/0201/large/open-uri20191120-27660-1c1iwed.jpg?1574222929"
                     alt="Map showing the location of Sakthi Vijayan Bike Rentals"
                     data-ai-hint="map location"
                     fill
@@ -48,14 +48,16 @@ export default function Footer() {
                   Auroville Main Road, Kuyilappalayam – 605101
                 </p>
               </li>
-              <li>
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-primary flex-shrink-0" />
                 <a href="mailto:svel58844@gmail.com" className="text-sm text-muted-foreground hover:text-primary">
-                  Email: svel58844@gmail.com
+                  svel58844@gmail.com
                 </a>
               </li>
-              <li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-primary flex-shrink-0" />
                 <a href="tel:8778254658" className="text-sm text-muted-foreground hover:text-primary">
-                  Phone: 87782 54658
+                  87782 54658
                 </a>
               </li>
             </ul>
