@@ -33,7 +33,7 @@ export async function sendEmail({ to = EMAIL_TO, subject, html }: MailOptions) {
 
   try {
     const info = await transporter.sendMail({
-      from: `"Velocity Rides" <${EMAIL_USER}>`,
+      from: `"Sakthi Vijayan Bike Rentals" <${EMAIL_USER}>`,
       to,
       subject,
       html,

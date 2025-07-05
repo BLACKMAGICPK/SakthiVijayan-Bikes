@@ -46,18 +46,40 @@ export async function POST(request: Request) {
       console.log("BOOKING API: Attempting to send email notification...");
       const { name, phone, bikeName, pickupDate, returnDate, pickupLocation } = parsedBooking.data;
       await sendEmail({
-          subject: `New Bike Booking: ${name}`,
+          subject: `🚨 New Bike Booking Received via Website`,
           html: `
-              <h1>New Booking Notification</h1>
-              <p>A new bike has been booked. Here are the details:</p>
-              <ul>
-                  <li><strong>Name:</strong> ${name}</li>
-                  <li><strong>Phone:</strong> ${phone}</li>
-                  <li><strong>Bike:</strong> ${bikeName}</li>
-                  <li><strong>Pickup Date:</strong> ${new Date(pickupDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</li>
-                  <li><strong>Return Date:</strong> ${new Date(returnDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</li>
-                  <li><strong>Pickup Location:</strong> ${pickupLocation}</li>
-              </ul>
+            <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+                <h2 style="color: #333;">🚨 New Bike Booking Received via Website</h2>
+                <p>Hi Admin,</p>
+                <p>You have received a new bike booking from your website. Below are the booking details:</p>
+                <table style="width: 100%; max-width: 600px; border-collapse: collapse; margin-top: 20px; border: 1px solid #ddd;">
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 12px; font-weight: bold; background-color: #f9f9f9; border-right: 1px solid #ddd;">Name:</td>
+                        <td style="padding: 12px;">${name}</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 12px; font-weight: bold; background-color: #f9f9f9; border-right: 1px solid #ddd;">Phone:</td>
+                        <td style="padding: 12px;">${phone}</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 12px; font-weight: bold; background-color: #f9f9f9; border-right: 1px solid #ddd;">Bike:</td>
+                        <td style="padding: 12px;">${bikeName}</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 12px; font-weight: bold; background-color: #f9f9f9; border-right: 1px solid #ddd;">Pickup Date:</td>
+                        <td style="padding: 12px;">${new Date(pickupDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 12px; font-weight: bold; background-color: #f9f9f9; border-right: 1px solid #ddd;">Return Date:</td>
+                        <td style="padding: 12px;">${new Date(returnDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; font-weight: bold; background-color: #f9f9f9; border-right: 1px solid #ddd;">Pickup Location:</td>
+                        <td style="padding: 12px;">${pickupLocation}</td>
+                    </tr>
+                </table>
+                <p style="margin-top: 20px;">Please remember to check your admin dashboard for all booking details.</p>
+            </div>
           `,
       });
       console.log("BOOKING API: Email notification sent successfully.");
