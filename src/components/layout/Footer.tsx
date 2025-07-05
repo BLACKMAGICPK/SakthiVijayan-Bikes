@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Footer() {
@@ -28,23 +28,9 @@ export default function Footer() {
           <div>
             <h3 className="font-headline text-lg font-semibold">Contact Us</h3>
             <ul className="mt-4 space-y-3">
-               <li>
-                <a 
-                  href="https://www.google.com/maps/search/?api=1&query=XRRM%2B75+Kuilapalayam,+Tamil+Nadu" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="block relative h-24 w-full cursor-pointer overflow-hidden rounded-md border hover:opacity-80 transition-opacity"
-                  aria-label="View our location on Google Maps"
-                >
-                  <Image
-                    src="https://images.adsttc.com/media/image_maps/5dd4/baf0/3312/fdf9/a600/0201/large/open-uri20191120-27660-1c1iwed.jpg?1574222929"
-                    alt="Map showing the location of Sakthi Vijayan Bike Rentals"
-                    data-ai-hint="map location"
-                    fill
-                    className="object-cover"
-                  />
-                </a>
-                <p className="text-sm text-muted-foreground mt-2">
+               <li className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 text-primary flex-shrink-0 mt-1" />
+                <p className="text-sm text-muted-foreground">
                   Auroville Main Road, Kuyilappalayam – 605101
                 </p>
               </li>
@@ -63,16 +49,28 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="font-headline text-lg font-semibold">Follow Us</h3>
-            <div className="mt-4 flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary"><Facebook /></Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary"><Instagram /></Link>
-            </div>
+            <h3 className="font-headline text-lg font-semibold">Our Location</h3>
+             <a 
+                href="https://www.google.com/maps/search/?api=1&query=XRRM%2B75+Kuilapalayam,+Tamil+Nadu" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="mt-4 block relative h-32 w-full cursor-pointer overflow-hidden rounded-md border hover:opacity-80 transition-opacity"
+                aria-label="View our location on Google Maps"
+              >
+                <Image
+                  src="https://images.adsttc.com/media/image_maps/5dd4/baf0/3312/fdf9/a600/0201/large/open-uri20191120-27660-1c1iwed.jpg?1574222929"
+                  alt="Map showing the location of Sakthi Vijayan Bike Rentals"
+                  data-ai-hint="map location"
+                  fill
+                  className="object-cover"
+                />
+              </a>
           </div>
         </div>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 border-t border-border pt-4 text-sm text-muted-foreground sm:flex-row sm:justify-between">
           <p>© Developed by Logic Loopers | Turning Logics into Launches</p>
            <div className="flex space-x-4">
+              <Link href="#" className="text-muted-foreground hover:text-primary"><Facebook /></Link>
               <Link href="#" className="text-muted-foreground hover:text-primary"><Instagram /></Link>
               <Link href="#" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
             </div>
