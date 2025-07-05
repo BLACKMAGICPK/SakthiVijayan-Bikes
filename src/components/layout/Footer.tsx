@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Linkedin, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Footer() {
@@ -27,17 +27,26 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="font-headline text-lg font-semibold">Contact Us</h3>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-3">
                <li>
                 <a 
                   href="https://www.google.com/maps/search/?api=1&query=XRRM%2B75+Kuilapalayam,+Tamil+Nadu" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex items-start gap-2 text-sm text-muted-foreground hover:text-primary"
+                  className="block relative h-24 w-full cursor-pointer overflow-hidden rounded-md border hover:opacity-80 transition-opacity"
+                  aria-label="View our location on Google Maps"
                 >
-                  <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" />
-                  <span>Auroville Main Road, Kuyilappalayam – 605101</span>
+                  <Image
+                    src="https://i.ibb.co/6y43JqY/map-image.png"
+                    alt="Map showing the location of Sakthi Vijayan Bike Rentals"
+                    data-ai-hint="map location"
+                    fill
+                    className="object-cover"
+                  />
                 </a>
+                <p className="text-sm text-muted-foreground mt-2">
+                  Auroville Main Road, Kuyilappalayam – 605101
+                </p>
               </li>
               <li>
                 <a href="mailto:svel58844@gmail.com" className="text-sm text-muted-foreground hover:text-primary">
