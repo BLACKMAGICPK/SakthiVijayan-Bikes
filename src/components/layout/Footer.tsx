@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Footer() {
@@ -70,7 +70,6 @@ export default function Footer() {
         <div className="mt-8 flex flex-col items-center justify-center gap-4 border-t border-border pt-4 text-sm text-muted-foreground sm:flex-row sm:justify-between">
           <p>© Developed by Logic Loopers | Turning Logics into Launches</p>
            <div className="flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary"><Facebook /></Link>
               <Link href="#" className="text-muted-foreground hover:text-primary"><Instagram /></Link>
               <Link href="#" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
             </div>
