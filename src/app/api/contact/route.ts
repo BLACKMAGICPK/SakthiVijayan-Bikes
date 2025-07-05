@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 import clientPromise from '@/lib/mongodb';
+import { sendEmail } from '@/lib/nodemailer';
 
 const contactSchema = z.object({
   firstName: z.string().min(1, "First name is required."),
@@ -37,12 +38,33 @@ export async function POST(request: Request) {
     const insertResult = await collection.insertOne(parsedContact.data);
     console.log("CONTACT API: Document inserted successfully:", insertResult.insertedId);
 
+    // Send email notification
+    try {
+        console.log("CONTACT API: Attempting to send email notification...");
+        const { firstName, lastName, email, message } = parsedContact.data;
+        await sendEmail({
+            subject: `New Contact Message from ${firstName} ${lastName}`,
+            html: `
+                <h1>New Contact Form Submission</h1>
+                <p>You have received a new message from your website's contact form.</p>
+                <ul>
+                    <li><strong>Name:</strong> ${firstName} ${lastName}</li>
+                    <li><strong>Email:</strong> ${email}</li>
+                    <li><strong>Message:</strong></li>
+                </ul>
+                <p style="padding: 12px; border-left: 4px solid #ccc; margin-top: 8px; font-style: italic;">${message}</p>
+            `,
+        });
+        console.log("CONTACT API: Email notification sent successfully.");
+    } catch (emailError) {
+        console.error("CONTACT API: Failed to send email notification:", emailError);
+    }
+
     return NextResponse.json({ message: 'Message sent successfully!' }, { status: 201 });
   } catch (error: any) {
     console.error('--- CONTACT API: FATAL ERROR ---');
-    console.error(error); // Log the full error object
+    console.error(error);
 
-    // Check for a specific MongoDB connection timeout error
     if (error.name === 'MongoServerSelectionError') {
       return NextResponse.json({
           message: 'Could not connect to database.',

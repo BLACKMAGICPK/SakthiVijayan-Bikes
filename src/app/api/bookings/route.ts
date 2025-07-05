@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 import clientPromise from '@/lib/mongodb';
+import { sendEmail } from '@/lib/nodemailer';
 
 const bookingSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -40,12 +41,37 @@ export async function POST(request: Request) {
     const insertResult = await collection.insertOne(parsedBooking.data);
     console.log("BOOKING API: Document inserted successfully:", insertResult.insertedId);
 
+    // Send email notification
+    try {
+      console.log("BOOKING API: Attempting to send email notification...");
+      const { name, phone, bikeName, pickupDate, returnDate, pickupLocation } = parsedBooking.data;
+      await sendEmail({
+          subject: `New Bike Booking: ${name}`,
+          html: `
+              <h1>New Booking Notification</h1>
+              <p>A new bike has been booked. Here are the details:</p>
+              <ul>
+                  <li><strong>Name:</strong> ${name}</li>
+                  <li><strong>Phone:</strong> ${phone}</li>
+                  <li><strong>Bike:</strong> ${bikeName}</li>
+                  <li><strong>Pickup Date:</strong> ${new Date(pickupDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</li>
+                  <li><strong>Return Date:</strong> ${new Date(returnDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</li>
+                  <li><strong>Pickup Location:</strong> ${pickupLocation}</li>
+              </ul>
+          `,
+      });
+      console.log("BOOKING API: Email notification sent successfully.");
+    } catch (emailError) {
+      // Log the email error but don't fail the entire request,
+      // as the booking was successfully saved to the DB.
+      console.error("BOOKING API: Failed to send email notification:", emailError);
+    }
+
     return NextResponse.json({ message: 'Booking successful!', booking: parsedBooking.data }, { status: 201 });
   } catch (error: any) {
     console.error('--- BOOKING API: FATAL ERROR ---');
-    console.error(error); // Log the full error object
+    console.error(error);
 
-    // Check for a specific MongoDB connection timeout error
     if (error.name === 'MongoServerSelectionError') {
       return NextResponse.json({
           message: 'Could not connect to database.',
