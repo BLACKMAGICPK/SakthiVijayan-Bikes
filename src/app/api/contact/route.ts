@@ -43,16 +43,28 @@ export async function POST(request: Request) {
         console.log("CONTACT API: Attempting to send email notification...");
         const { firstName, lastName, email, message } = parsedContact.data;
         await sendEmail({
-            subject: `New Contact Message from ${firstName} ${lastName}`,
+            subject: `📨 New Contact Form Submission Received`,
             html: `
-                <h1>New Contact Form Submission</h1>
-                <p>You have received a new message from your website's contact form.</p>
-                <ul>
-                    <li><strong>Name:</strong> ${firstName} ${lastName}</li>
-                    <li><strong>Email:</strong> ${email}</li>
-                    <li><strong>Message:</strong></li>
-                </ul>
-                <p style="padding: 12px; border-left: 4px solid #ccc; margin-top: 8px; font-style: italic;">${message}</p>
+              <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+                  <h2 style="color: #333;">📨 New Contact Form Submission Received</h2>
+                  <p>Hi Admin,</p>
+                  <p>You’ve received a new enquiry from the contact form on your website. Here are the details:</p>
+                  <table style="width: 100%; max-width: 600px; border-collapse: collapse; margin-top: 20px; border: 1px solid #ddd;">
+                      <tr style="border-bottom: 1px solid #ddd;">
+                          <td style="padding: 12px; font-weight: bold; background-color: #f9f9f9; border-right: 1px solid #ddd;">Name:</td>
+                          <td style="padding: 12px;">${firstName} ${lastName}</td>
+                      </tr>
+                      <tr style="border-bottom: 1px solid #ddd;">
+                          <td style="padding: 12px; font-weight: bold; background-color: #f9f9f9; border-right: 1px solid #ddd;">Email:</td>
+                          <td style="padding: 12px;">${email}</td>
+                      </tr>
+                      <tr>
+                          <td style="padding: 12px; font-weight: bold; background-color: #f9f9f9; border-right: 1px solid #ddd;">Message:</td>
+                          <td style="padding: 12px;">${message}</td>
+                      </tr>
+                  </table>
+                  <p style="margin-top: 20px;">Please follow up with the sender as soon as possible.</p>
+              </div>
             `,
         });
         console.log("CONTACT API: Email notification sent successfully.");
