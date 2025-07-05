@@ -38,7 +38,7 @@ export default function AdminLoginPage() {
     setIsLoading(true);
     // In a real application, this would be a call to a backend authentication service.
     // For this prototype, we are using hardcoded credentials on the client-side.
-    if (data.username === 'Sakthivel' && data.password === 'Sakthivel@2006') {
+    if (data.username === 'Sakthivel' && data.password === 'Sakthivel@2005') {
       toast({
         title: 'Login Successful',
         description: 'Redirecting to dashboard...',
