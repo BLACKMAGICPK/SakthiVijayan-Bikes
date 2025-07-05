@@ -8,6 +8,9 @@ import { Toaster } from '@/components/ui/toaster';
 export const metadata: Metadata = {
   title: 'Sakthi Vijayan Bike Rentals',
   description: 'Your ultimate destination for bike rentals. Ride with speed and style.',
+  icons: {
+    icon: 'https://i.ibb.co/5g4tTZBw/Copilot-20250703-123937.png', // <-- CHANGE THIS URL
+  },
 };
 
 export default function RootLayout({
